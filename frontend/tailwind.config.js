@@ -1,0 +1,1 @@
+export default {content:["./index.html","./src/**/*.{js,jsx}"],theme:{extend:{fontFamily:{mono:["JetBrains Mono","monospace"]},colors:{neon:"#00ff66",cyan:"#00f0ff"},boxShadow:{neon:"0 0 24px #00ff6630"}}},plugins:[]};

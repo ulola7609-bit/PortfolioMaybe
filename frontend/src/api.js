@@ -1,0 +1,2 @@
+const API=import.meta.env.VITE_API_URL||"http://localhost:8000";
+export async function api(path,options={}){const initData=window.Telegram?.WebApp?.initData||"";const res=await fetch(`${API}/api${path}`,{...options,headers:{"Content-Type":"application/json","X-Telegram-Init-Data":initData,...options.headers}});if(!res.ok){const err=await res.json().catch(()=>({detail:"Request failed"}));throw new Error(err.detail||"Request failed")}return res.json()}
